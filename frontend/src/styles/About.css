@@ -1,0 +1,19 @@
+.headshot-img {
+  width: 200px; /* Set the desired width for the image */
+  height: auto; /* Maintain the aspect ratio */
+  border-radius: 50%; /* Optional: Add a border radius for a circular shape */
+}
+
+.container {
+    margin-bottom: 60px; /* Add margin at the bottom to create space for the fixed footer */
+  }
+
+.bio {
+    background-color: #f0f0f0;
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    margin: 20px auto; /* Adjusted margin for centering */
+  }

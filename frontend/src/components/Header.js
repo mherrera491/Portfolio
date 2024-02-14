@@ -14,9 +14,9 @@ export default function Header(props) {
     <header>
       <h1>My Portfolio Page</h1>
       <nav style={navStyle}>
-        <Link to="/">
+        {/* <Link to="/">
           <div>HOME</div>
-        </Link>
+        </Link> */}
         <Link to="/about">
           <div>ABOUT</div>
         </Link>
