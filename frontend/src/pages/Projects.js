@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function Projects(props) {
   // Create state to hold projects
