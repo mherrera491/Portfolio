@@ -31,7 +31,7 @@ export default function Projects(props) {
         </Card.Body>
       </Card>
     ));
-  };
+  }; 
 
   return projects ? (
     <div className="container mt-5">
