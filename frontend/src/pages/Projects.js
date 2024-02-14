@@ -1,39 +1,44 @@
+import React from "react";
 import { useState, useEffect } from "react";
+import { Card, Button } from "react-bootstrap";
 
 export default function Projects(props) {
-  // Create state to hold projects
   const [projects, setProjects] = useState(null);
 
-  // Create function to make API call
   const getProjectsData = async () => {
-    // Make API call and get a response
     const response = await fetch(props.URL + "projects");
-    // Turn response into JavaScript object
     const data = await response.json();
-    // set the projects state to the data
     setProjects(data);
   };
 
-  // Make an initial call for the data inside a useEffect, so it only happens once the component loads
   useEffect(() => {
     getProjectsData();
   }, []);
 
-  // Define a function that will return the JSX needed once we get the data
   const loaded = () => {
     return projects.map((project, index) => (
-      <div key={index}>
-        <h1>{project.name}</h1>
-        <img src={project.image} alt={project.name} />
-        <a href={project.git}>
-          <button>Github</button>
-        </a>
-        <a href={project.live}>
-          <button>live site</button>
-        </a>
-      </div>
+      <Card key={index} className="my-4">
+        <Card.Img variant="top" src={project.image} alt={project.name} />
+        <Card.Body>
+          <Card.Title>{project.name}</Card.Title>
+          <Card.Text>{project.description}</Card.Text>
+          <Button href={project.git} variant="primary">
+            GitHub
+          </Button>
+          <Button href={project.live} variant="success" className="ms-2">
+            Live Site
+          </Button>
+        </Card.Body>
+      </Card>
     ));
   };
 
-  return projects ? loaded() : <h1>Loading...</h1>;
+  return projects ? (
+    <div className="container mt-5">
+      <h1 className="mb-4">Portfolio Projects</h1>
+      <div className="d-flex flex-wrap">{loaded()}</div>
+    </div>
+  ) : (
+    <h1>Loading...</h1>
+  );
 }
