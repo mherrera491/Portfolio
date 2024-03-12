@@ -16,6 +16,12 @@
       "live": "https://main--drhealthfrontend.netlify.app/",
       "git": "https://github.com/edcarcruz/DrHealthBackEnd",
       "image": "https://i.imgur.com/FTZfuC9.png" 
+    },
+    {
+      "name": "On The Record",
+      "live": "https://ontherecord-lc80.onrender.com",
+      "git": "https://github.com/mherrera491/ontherecord",
+      "image": "hhttps://i.imgur.com/odNdGl2.png" 
     }
   ]
   
